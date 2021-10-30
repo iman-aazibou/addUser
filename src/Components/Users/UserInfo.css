@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+}
+
+li {
+  border: 1px solid purple;
+  text-decoration: none;
+  padding: 6px;
+  margin: 14px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: light;
+  color: purple;
+}
