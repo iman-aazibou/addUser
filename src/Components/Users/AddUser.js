@@ -12,13 +12,12 @@ const AddUser = (props) => {
     event.preventDefault();
 
     if (userInput.trim().length === 0 || ageInput.length === 0) {
-      alert("user error");
       return;
     } if(+ageInput < 0){
       return;
     }
 
-    console.log(userInput, ageInput);
+    props.onAddUser(userInput, ageInput);
     setUserInput("");
     setAgeInput("");
   };
