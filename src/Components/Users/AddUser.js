@@ -17,7 +17,7 @@ const AddUser = (props) => {
     const enteredUsername = usernameInputRef.current.value;
     const enteredAge = ageInputRef.current.value;
 
-    console.log(enteredUsername, enteredAge)
+    console.log(enteredUsername, enteredAge);
 
     if (enteredUsername.trim().length === 0 || enteredAge.length === 0) {
       return setError({
@@ -37,7 +37,6 @@ const AddUser = (props) => {
     ageInputRef.current.value = "";
   };
 
-
   const errorHandling = () => {
     return setError(null);
   };
@@ -48,18 +47,9 @@ const AddUser = (props) => {
       <Card>
         <form className="input" onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
-          <input
-            id="username"
-            type="text"
-            ref={usernameInputRef}
-          />
+          <input id="username" type="text" ref={usernameInputRef} />
           <label htmlFor="age"> Age (Years)</label>
-          <input
-         
-            id="age"
-            type="number"
-            ref={ageInputRef}
-          />
+          <input id="age" type="number" ref={ageInputRef} />
           <Button>
             <button type="submit">Add User</button>
           </Button>
